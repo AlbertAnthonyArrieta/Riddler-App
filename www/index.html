@@ -64,13 +64,13 @@
                                 monetization_on
                               </i>
                             </div>
-                            <div class="chip-label game-coin">$0</div>
+                            <div class="chip-label game-coin">$<span id="coins"></span></div>
                         </div>
                     </div>
                     <div class="buttonContainer" >
-                        <a href="/level1/" class="button button-round button-fill color-blue link">Play</a>
-                        <a class="button button-round button-fill color-gray link">Levels</a>
-                        <a href="/settings/" class="button button-round button-fill color-gray link">Settings</a>
+                        <a href="/level1/" class="button button-round button-fill color-blue link buttonmenu">Play</a>
+                        <a class="button button-round button-fill color-gray link buttonmenu">Levels</a>
+                        <a href="/settings/" class="button button-round button-fill color-gray link buttonmenu">Settings</a>
                     </div>
                   </div>
                 </div>
@@ -80,5 +80,6 @@
         <script src="cordova.js"></script>
         <script src="js/framework7-bundle.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/game.js"></script>
     </body>
 </html>

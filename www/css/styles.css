@@ -7,6 +7,11 @@
     padding: 50px;
 }
 
-.button {
-    margin: 30px;
+.buttonmenu {
+    margin-bottom: 15px;
+}
+
+#hintContainer {
+    padding-left: 200px;
+    padding-right: 200px;
 }

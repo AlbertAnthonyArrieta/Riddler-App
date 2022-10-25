@@ -12,6 +12,7 @@ var app = new Framework7({
         {
           path: '/settings/',
           url: 'pages/settings.html',
+          scripts: 'js/game.js/'
         },
         {
             path: '/level1/',
@@ -20,3 +21,5 @@ var app = new Framework7({
       ],
   });
 var mainView = app.views.create('.view-main')
+
+

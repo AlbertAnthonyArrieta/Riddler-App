@@ -8,7 +8,7 @@ var levels = [level1, level2] ;
 
 var level1 = {num: 1, 
     riddle: 'What has to be broken before you can use it?', 
-    answer: 'egg',
+    answer: "egg",
     hint1: 'It is a food',
     hint2: 'A breakfast Food',
     hint3: '3 letter word',
@@ -59,10 +59,10 @@ $$(document).on('page:init', function(e) {
     $('#levelnum').html(level1.num);
     $('#riddle').html(level1.riddle);
     $('#submit').on("click", function () {
-        if ($("#answerInput").text() == level1.answer) {
+        if ($("#answerInput").val() == level1.answer) {
             console.log("CORRECT");
         } else {
-            console.log("INCORRECT: " + $("#answerInput").text());
+            console.log("INCORRECT");
         }
     })
 

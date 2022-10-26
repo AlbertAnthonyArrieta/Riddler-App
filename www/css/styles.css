@@ -12,10 +12,6 @@
 }
 
 #hintContainer {
-<<<<<<< HEAD
-    padding-left: 100px;
-    padding-right: 100px;
-=======
     padding-left: 130px;
     padding-right: 130px;
 }
@@ -23,5 +19,4 @@
 #answerbtnContainer {
     padding-left: 70px;
     padding-right: 70px;
->>>>>>> 3c851f7dfe2d5fcd4da963f6acda9755499a59cd
 }

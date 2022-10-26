@@ -15,8 +15,8 @@ var app = new Framework7({
           scripts: 'js/game.js/'
         },
         {
-            path: '/level1/',
-            url: 'pages/level1.html',
+            path: '/level/',
+            url: 'pages/level.html',
         },
       ],
   });

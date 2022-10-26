@@ -1,5 +1,5 @@
-<div class="page" data-name="level1">
-  <div class="level1">
+<div class="page" data-name="level">
+  <div class="level">
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
@@ -8,7 +8,7 @@
             <span class="material-symbols-outlined"> arrow_back_ios </span>
           </a>
         </div>
-        <div class="title">LEVEL 1</div>
+        <div class="title">LEVEL <span id="levelnum"></span> </div>
         <div class="right">
           <div class="chip">
             <div class="chip-media bg-color-yellow">
@@ -23,7 +23,7 @@
 
     <div class="container">
       <h2>What has to be broken before you can use it?</h2>
-      <div id="hintContainer" class="container">
+      <div id="hintContainer">
         <button class="button button-fill button-round">HINT</button>
       </div>
     </div>
@@ -38,7 +38,6 @@
             <div class="item-inner">
               <div class="item-input-wrap">
                 <input type="text" placeholder="Your Answer" />
-                <span class="input-clear-button"></span>
               </div>
             </div>
           </li>

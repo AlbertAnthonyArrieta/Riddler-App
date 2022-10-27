@@ -11,12 +11,21 @@
     margin-bottom: 15px;
 }
 
+.center-align {
+    text-align: center;
+}
+
 #hintContainer {
     padding-left: 130px;
     padding-right: 130px;
 }
 
 #answerbtnContainer {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#hintBtnContainer {
     padding-left: 70px;
     padding-right: 70px;
 }

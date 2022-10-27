@@ -1,7 +1,7 @@
 //TODO: pop up messages for errors and wins
 
 
-var coins = 250;
+var coins = 0;
 var progress = 0;
 
 var $$ = Dom7;
@@ -69,7 +69,7 @@ var levels = [
         hint1: 'Something to do with light',
         hint2: 'Not a physical object, but follow a physical object',
     },
-    
+
     {
         level: 10,
         riddle: 'Always old, sometimes new. Never sad, sometimes blue. Never empty, sometimes full. Never pushes, always pulls.',
@@ -77,8 +77,8 @@ var levels = [
         hint1: 'New ____, Blue ____, Full ____? ',
         hint2: 'What shines bright at the sky at night?',
     },
-    
-    
+
+
 ];
 
 //levels
@@ -97,10 +97,10 @@ function levelup() {
     $('#levelnum').html(levels[progress].level);
     $('#riddle').html(levels[progress].riddle);
     $('#answerInput').val('');
-    $('#hint1').html('<a id="hint1btn" class="button button-round button-fill color-blue link buttonmenu">HINT 1 $50</a>')
-    $('#hint2').html('<a id="hint2btn" class="button button-round button-fill color-blue link buttonmenu">HINT 2 $50</a>')
-    $('#revanswer').html('<a id="answerbtn" class="button button-round button-fill color-blue link buttonmenu">REVEAL ANSWER $200</a>')    
-    
+    $('#hint1').html('<a id="hint1btn" class="button button-round button-fill color-primary link buttonmenu">HINT 1 $50</a>')
+    $('#hint2').html('<a id="hint2btn" class="button button-round button-fill color-primary link buttonmenu">HINT 2 $50</a>')
+    $('#revanswer').html('<a id="answerbtn" class="button button-round button-fill color-primary link buttonmenu">REVEAL ANSWER $200</a>')
+
     $('#hint1btn').on("click", function () {
         if (coins >= 50) {
             console.log("purchased hint 1");
@@ -135,7 +135,6 @@ function levelup() {
 }
 
 function incorrectAnswer() {
-    //add warning 
 }
 
 function addcoins(amount) {
@@ -154,7 +153,12 @@ function deletecoins(amount) {
 
 //Global Script for all pages
 $$(document).on('page:init', function (e) {
+    //Global variables
     $(".coins").html(coins);
+    $('.open-alert').on('click', function () {
+        app.alert('Hello');
+    });
+
 
     //settings page
     $("#add100").on("click", function () {
@@ -185,7 +189,7 @@ $$(document).on('page:init', function (e) {
             deletecoins(50);
             $('#hint1').html('HINT 1: ' + levels[progress].hint1);
         } else {
-            console.log("Insufficient Funds");
+            alert("Insufficient Funds");
             // CREATE POPUP
         }
     })
@@ -202,7 +206,7 @@ $$(document).on('page:init', function (e) {
     $('#answerbtn').on("click", function () {
         if (coins >= 200) {
             console.log("purchased reveal answer");
-            deletecoins(50);
+            deletecoins(200);
             $('#revanswer').html('ANSWER: ' + levels[progress].answer);
         } else {
             console.log("Insufficient Funds");

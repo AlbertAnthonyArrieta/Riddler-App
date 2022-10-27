@@ -1,3 +1,6 @@
+//TODO: pop up messages for errors and wins
+
+
 var coins = 250;
 var progress = 0;
 

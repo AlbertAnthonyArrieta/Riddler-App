@@ -1,7 +1,7 @@
 //TODO: pop up messages for errors and wins
 
 
-var coins = 0;
+var coins = 250;
 var progress = 0;
 
 var $$ = Dom7;
@@ -94,6 +94,7 @@ function resetGame() {
 function levelup() {
     progress++;
     addcoins(25)
+
     $('#levelnum').html(levels[progress].level);
     $('#riddle').html(levels[progress].riddle);
     $('#answerInput').val('');
@@ -134,9 +135,6 @@ function levelup() {
 
 }
 
-function incorrectAnswer() {
-}
-
 function addcoins(amount) {
     coins += amount;
     $(".coins").html(coins);
@@ -146,10 +144,6 @@ function deletecoins(amount) {
     coins -= amount;
     $(".coins").html(coins);
 }
-
-
-
-
 
 //Global Script for all pages
 $$(document).on('page:init', function (e) {
@@ -166,7 +160,7 @@ $$(document).on('page:init', function (e) {
         console.log("ADDING COINS")
     });
 
-    $("#resetGame").on("click", function () {
+    $(".resetGame").on("click", function () {
         resetGame();
         console.log("Game Reset")
     });
@@ -199,7 +193,7 @@ $$(document).on('page:init', function (e) {
             deletecoins(50);
             $('#hint2').html('HINT 2: ' + levels[progress].hint2);
         } else {
-            console.log("Insufficient Funds");
+            alert("Insufficient Funds");
             // CREATE POPUP
         }
     })
@@ -209,18 +203,21 @@ $$(document).on('page:init', function (e) {
             deletecoins(200);
             $('#revanswer').html('ANSWER: ' + levels[progress].answer);
         } else {
-            console.log("Insufficient Funds");
+            alert("Insufficient Funds");
             // CREATE POPUP
         }
     })
 
     //submission
     $('#submit').on("click", function () {
-        if ($("#answerInput").val() == levels[progress].answer) {
-            console.log("CORRECT");
+        if ($("#answerInput").val().toLowerCase() == levels[progress].answer) {
+            alert("Correct!");
             levelup();
+            if (progress == 9) {
+                $('#submit').html('<a href="/finish/" class="button button-fill button-round">SUBMIT</a>')
+            }
         } else {
-            console.log("INCORRECT");
+            alert("Incorrect Answer");
             incorrectAnswer();
         }
     })

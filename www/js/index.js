@@ -22,6 +22,10 @@ var app = new Framework7({
       path: '/howtoplay/',
       url: 'pages/howtoplay.html',
     },
+    {
+      path: '/finish/',
+      url: 'pages/finish.html',
+    },
   ],
 });
 var mainView = app.views.create('.view-main');

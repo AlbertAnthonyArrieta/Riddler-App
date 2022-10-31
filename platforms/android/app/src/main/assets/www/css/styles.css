@@ -1,0 +1,44 @@
+.container {
+    text-align: center;
+    padding: 25px;
+}
+
+.buttonContainer {
+    padding: 50px;
+}
+
+.buttonmenu {
+    margin-bottom: 15px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+#hintContainer {
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 200px;
+}
+
+#answerbtnContainer {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#hintBtnContainer {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.levelTile {
+    background-color: rgb(223, 223, 223);
+    font-weight: 600px;
+    height: 50px;
+    width: 50px;
+    vertical-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+

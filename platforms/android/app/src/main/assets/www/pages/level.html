@@ -1,0 +1,90 @@
+<div class="page" data-name="level">
+  <div class="page-content">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a class="link back" href="#">
+            <span class="material-symbols-outlined"> arrow_back_ios </span>
+          </a>
+        </div>
+        <div class="title">LEVEL <span id="levelnum"></span> </div>
+        <div class="right">
+          <div class="chip">
+            <div class="chip-media bg-color-yellow">
+              <i class="icon f7-icons if-not-md"></i>
+              <i class="material-symbols-outlined"> monetization_on </i>
+            </div>
+            <div class="chip-label game-coin">$<span class="coins"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 id="riddle"></h2>
+      <div id="hintContainer">
+        <!-- <a class="button button-fill button-round color-gray">HINT</a> -->
+        <a class="button button-fill sheet-open" href="#" data-sheet=".sheet-modal">HINTS</a>
+      </div>
+
+      <div class="sheet-modal">
+        <!-- Sheet Modal Toolbar, optional -->
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <div class="left"> </div>
+            <div class="title">
+              HINTS
+            </div>
+            <div class="right">
+              <a href="#" class="link sheet-close">Close</a>
+            </div>
+          </div>
+        </div>
+        <!-- Sheet Modal Inner -->
+        <div class="sheet-modal-inner">
+          <!-- Sheet Modal content -->
+          <div class="block">
+            <div class="answerbtnContainer">
+              <p id="hint1" class="center-align">
+                <a id="hint1btn" class="button button-round button-fill color-primary link buttonmenu">HINT 1 $50</a>
+              </p>
+              <p id="hint2" class="center-align">
+                <a id="hint2btn" class="button button-round button-fill color-primary link buttonmenu">HINT 2 $50</a>
+              </p>
+              <p id="revanswer" class="center-align">
+                <a id="answerbtn" class="button button-round button-fill color-primary link buttonmenu">REVEAL ANSWER $200</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="container">
+      <div class="list">
+        <ul>
+          <li class="item-content item-input" id="answerInputWrapper">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                <input id="answerInput" type="text" placeholder="Your Answer" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <div id="answerbtnContainer">
+        <a id="submit" class="button button-fill button-round">SUBMIT</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,6 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <platform name="android">
-        <icon src="www/res/icon/icon.png" />
-    </platform>
+    <icon src="www/res/icon/icon.png" />
+    <preference name="loglevel" value="DEBUG" />
 </widget>
